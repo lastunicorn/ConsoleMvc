@@ -34,16 +34,22 @@ echo ---
 echo --- Retrieve assemblies
 echo ---
 echo.
-xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\*" "ConsoleMvc\lib\Net461"
+xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\*.dll" "ConsoleMvc\lib\Net461\"
+if %errorlevel% neq 0 goto :error
+xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\*.xml" "ConsoleMvc\lib\Net461\"
+if %errorlevel% neq 0 goto :error
+xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\ro\*" "ConsoleMvc\lib\Net461\ro\"
+if %errorlevel% neq 0 goto :error
+xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\fr\*" "ConsoleMvc\lib\Net461\fr\"
 if %errorlevel% neq 0 goto :error
 
-echo.
-echo ---
-echo --- Retrieve assemblies
-echo ---
-echo.
-xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net45\*" "ConsoleMvc\lib\Net45"
-if %errorlevel% neq 0 goto :error
+rem echo.
+rem echo ---
+rem echo --- Retrieve assemblies
+rem echo ---
+rem echo.
+rem xcopy /Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net45\*" "ConsoleMvc\lib\Net45"
+rem if %errorlevel% neq 0 goto :error
 
 rem ----------------------------------------------------------------------------------------------------
 rem Retrieve license file.

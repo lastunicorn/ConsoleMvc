@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ConsoleMvc</id>
+    <version>0.1.0</version>
+    <authors>Dust in the Wind</authors>
+	<title>ConsoleMvc</title>
+    <owners>Dust in the Wind</owners>
+	<licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <projectUrl>https://github.com/lastunicorn/ConsoleMvc</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small framework that helps you structure the presentation level of a console application.</description>
+	<summary>A small framework that helps you structure the presentation level of a console application.</summary>
+    <releaseNotes>Contains the infrastructure to create a stateful console application.</releaseNotes>
+    <copyright>Copyright 2017-2018 Dust in the Wind</copyright>
+    <tags>console cli prompter mvc</tags>
+  </metadata>
+  <files>
+    <file src="lib\**" target="lib" />
+    <file src="changelog.txt" target="changelog.txt" />
+    <file src="readme.txt" target="readme.txt" />
+  </files>
+</package>

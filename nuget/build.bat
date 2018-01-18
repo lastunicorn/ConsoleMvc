@@ -55,16 +55,22 @@ echo ---
 echo --- Retrieve assemblies - Net461
 echo ---
 echo.
-xcopy /R/Y/S/I "%root_directory%\source\ConsoleTools\bin\Release-Net461\*" "lib\net461"
+xcopy /R/Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\*.dll" "lib\Net461\"
+if %errorlevel% neq 0 goto :error
+xcopy /R/Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\*.xml" "lib\Net461\"
+if %errorlevel% neq 0 goto :error
+xcopy /R/Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\ro\*" "lib\Net461\ro\"
+if %errorlevel% neq 0 goto :error
+xcopy /R/Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net461\fr\*" "lib\Net461\fr\"
 if %errorlevel% neq 0 goto :error
 
-echo.
-echo ---
-echo --- Retrieve assemblies - Net45
-echo ---
-echo.
-xcopy /R/Y/S/I "%root_directory%\source\ConsoleTools\bin\Release-Net45\*" "lib\net45"
-if %errorlevel% neq 0 goto :error
+rem echo.
+rem echo ---
+rem echo --- Retrieve assemblies - Net45
+rem echo ---
+rem echo.
+rem xcopy /R/Y/S/I "%root_directory%\sources\ConsoleMvc\bin\Release-Net45\*" "lib\net45"
+rem if %errorlevel% neq 0 goto :error
 
 echo.
 echo ---
