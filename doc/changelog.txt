@@ -1,0 +1,10 @@
+ConsoleMvc
+==========
+
+Note: For any bug or feature request please add a new issue on GitHub: https://github.com/lastunicorn/ConsoleMvc/issues/new
+
+
+
+ver 0.1.0
+---------
+First release
